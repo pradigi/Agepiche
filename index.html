@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>आगे-पीछे</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Scripts/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/mobileui.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.12.4.js"></script>
+    <script src="Scripts/jquery-ui.js"></script>
+    <script src="Scripts/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/utility.js"></script>
+    <style>
+        .fullscreen-bg {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: -100;
+        }
+
+        .fullscreen-bg__video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            /*height: 100%;*/
+        }
+    </style>
+	<meta charset="utf-8" />
+</head>
+<body>
+<div style="background-image:url(Image/Preloader_3.gif);" class="se-pre-con col-lg-12 col-md-12 col-xs-12 col-sm-12"></div>
+   <div class="fullscreen-bg">
+       <video id="startvideo" class="fullscreen-bg__video">
+           <source src="sound/Aagepichhe.mp4" type="video/mp4">
+       </video>
+   </div>
+       <div style="display:none;" class="bg1" id="background3">
+           <button id="btnstart" class="btn btn-default" onclick="window.location.href = 'wordshop.html'" style="border:none;background-color: transparent;">
+               <img class="img-responsive play1" id="imgstart"/>
+           </button>
+
+       </div>
+    <script>
+	/*	$(document).ready(function () {
+		$(".se-pre-con").fadeIn('slow').delay(2000).hide(0);
+		setTimeout(function(){  
+			//Android.showVideo("KhelPuri/AgePichH/sound/Aagepichhe.mp4",null); 
+			var vid = document.getElementById("startvideo"); 
+			vid.play();
+			}, 2000);
+			setTimeout(function(){
+			   var other = document.getElementById('background3');
+					   other.style.display = 'block';
+			$(".bg1").css("background-image", "url('" + Utils.Path + "Image/Word-Repair-layout.png')");
+			$(".play1").attr("src", Utils.Path + "Image/Play_1.png");
+		   },21000);});	
+           */
+         	 $(document).ready(function () {
+		$(".se-pre-con").fadeIn('slow').delay(2000).hide(0);
+		setTimeout(function(){  
+			//Android.showVideo("KhelPuri/AgePiche/sound/Aagepichhe.mp4",null); 
+			var vid = document.getElementById("startvideo"); 
+			vid.play();
+			}, 2000);
+			setTimeout(function(){
+			   var other = document.getElementById('background3');
+					   other.style.display = 'block';
+			$(".bg1").css("background-image", "url('" + Utils.Path + "Image/Word-Repair-layout.png')");
+			$(".play1").attr("src", Utils.Path + "Image/Play_1.png");
+		   },21000);});	
+	</script>
+</body>
+</html>
